@@ -25,3 +25,5 @@ else {
 const welcome = document.getElementById("welcome")
 
 welcome.textContent = 'Good ' + greet + '!'
+
+localStorage.setItem("It's a secret to everybody.", 'This message is low-key')
