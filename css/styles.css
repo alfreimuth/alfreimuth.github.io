@@ -1,77 +1,105 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(44, 44, 44);
+    font-family: 'Courier New', monospace;
+    background-color: rgb(0,0,0);
     margin: 0;
     padding: 0;
     color: white;
+    font-size: 16px;
 }
 
 header {
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(0,0,0);
     padding: 10px 0;
     text-align: center;
     width: 100%;
-    float: left;
+    margin: 0;
+    border-bottom: 4px solid rgb(255, 175, 100);
+    box-shadow: 0 0 10px rgb(255, 175, 100);
 }
 
 nav {
-    text-align: center;
-    background-color: rgb(75, 75, 75);
-    float: left;
+    background-color: rgb(44,44,44);
     width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    height: auto;
+    border-top: 3px solid rgb(255, 175, 100);
 }
 
 nav ul {
-    list-style-type: none;
+   list-style-type: none; 
+   margin: 0;
+   padding: 0;
+   display: inline-block;
 }
 
 nav ul li {
     display: inline-block; 
-    padding-right: 50px; 
+    padding-right: 10px; 
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 20px;
-    color: white;
+    color: rgb(255, 175, 100);
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: rgb(255, 175, 100);
-    text-decoration: underline;
+    color: rgb(0, 255, 255);
+    text-decoration: underline dotted;
 }
 
-.intro{
+.main {
     padding: 20px;
     clear: both;
     width: 66%;
     height: stretch;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid rgb(163, 163, 163);
-    border-radius: 20px;
+    border: 4px solid rgb(255, 175, 100);
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 175, 100, 0.8), rgba(0, 255, 255, 0.8));
+    box-shadow: 0 0 20px rgba(255, 175, 100, 0.6);
     overflow: hidden;
 }
 
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 #mePic {
-    float: left;
+    aspect-ratio: auto 300 / 400;
     border-radius: 25px;
-    margin: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    max-height: 300px;
+    box-shadow: 0 0 15px rgba(255, 175, 100, 0.8);
 }
 
 .bio {
+    text-align: center;
+    width: 32.5%;
     margin-left: auto;
     margin-right: auto;
-    float: left;
-    text-align: center;
-    width: 30%;
 }
 
 .faves {
-    float: right;
-    width: 30%;
-    margin: 1em;
+    width: 32.5%;
+    margin-left: 1em;
+}
+
+.faves h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.faves ul {
+    list-style-type: none;
 }
 
 .faves ul li {
@@ -79,10 +107,18 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(44,44,44);
     padding: 10px 0;
     text-align: center;
     clear: both;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(255, 175, 100);
+}
+
+#welcome {
+    text-align: center;
 }
 
 #carousel {
@@ -90,7 +126,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-height: 300px;
+
     overflow: hidden;
     gap: 10px;
 }
@@ -99,6 +135,8 @@ footer {
     max-height: 300px;
     aspect-ratio: auto 300 / 400;
     border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    border: 4px solid rgb(255, 175, 100);
 }
 
 #buttons {
@@ -106,6 +144,21 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
+button {
+    background-color: rgb(255, 175, 100);
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease
+}
+
+button:hover {
+    background-color: rgb(0,255,255);
+    box-shadow: 0 0 10px rgb(0, 255, 255);
+}

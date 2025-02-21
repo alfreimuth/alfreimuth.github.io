@@ -10,21 +10,23 @@ const isEvening = hours >= 17 || hours < 4
 
 let greet = ''
 
+const welcome = document.getElementById("welcome")
+
 if(isMorning) {
     console.log('Morning')
     greet = 'Morning'
+    welcome.style.color = 'yellow'; 
 }
 else if(isAfternoon) {
     console.log('Afternoon')
     greet = 'Afternoon'
+    welcome.style.color = 'orange'; 
 }
 else {
     console.log('Evening')
     greet = 'Evening'
+    welcome.style.color = 'lightblue'; 
 }
-
-
-const welcome = document.getElementById("welcome")
 
 welcome.textContent = 'Good ' + greet + '!'
 
