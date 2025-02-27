@@ -162,3 +162,17 @@ button:hover {
     background-color: rgb(0,255,255);
     box-shadow: 0 0 10px rgb(0, 255, 255);
 }
+
+hr {
+    margin: 1em;
+    color: rgb(255, 175, 100);
+    box-shadow: 0 0 15px rgba(255, 175, 100, 0.8);
+}
+
+#todoListSection {
+    text-align: center;
+}
+
+#todoListSection ul {
+    list-style-type: none;
+}

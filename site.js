@@ -70,3 +70,48 @@ button[1].addEventListener('click', () => changeImage(1))
 setInterval(() => changeImage(1), 1500)
 
 
+// Todo list
+
+// Get from local storage
+const todos = JSON.parse(localStorage.getItem('todo-list')) || []
+
+// Save the list
+const saveList = () => localStorage.setItem('todo-list', JSON.stringify(todos))
+
+saveList()
+
+// Add new item 
+const btnAddItem = document.getElementById("todo")
+const txtAddItem = document.getElementById("new-todo")
+
+btnAddItem.addEventListener('click', () => {
+    if (!txtAddItem.value) return alert('Please enter your item to do.')
+    todos.push({ text: txtAddItem.value, completed: false })
+    saveList()
+    renderTodos()
+})
+
+const todoList = document.getElementById("todo-list")
+// Clear list items before recreating them
+todoList.innerHTML = ''
+
+// Create and add new list items to DOM
+const renderTodos = () => {
+            todoList.innerHTML = ''
+    todos.forEach(todo => {
+        const li = document.createElement('li')
+        li.textContent = todo.text
+        todoList.append(li)
+})}
+
+renderTodos()
+
+// Reset list (Am lazy)
+const btnResetList = document.getElementById("reset")
+btnResetList.addEventListener('click', () => { 
+    todos.forEach(todo => {
+        todos.length = 0
+        saveList()
+        renderTodos()
+    })
+ } )
