@@ -82,20 +82,22 @@ nav ul li a:hover {
 }
 
 .bio {
-    text-align: center;
     width: 32.5%;
     margin-left: auto;
     margin-right: auto;
+    font-size: larger;
+    text-indent: 50px;
 }
 
 .faves {
     width: 32.5%;
-    margin-left: 1em;
+    text-align: center;
+    font-size: large;
 }
 
 .faves h3 {
     width: 100%;
-    text-align: center;
+    padding-left: .3em;
 }
 
 .faves ul {
@@ -103,7 +105,8 @@ nav ul li a:hover {
 }
 
 .faves ul li {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 footer {

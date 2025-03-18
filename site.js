@@ -121,38 +121,30 @@ btnResetList.addEventListener('click', () => {
 
 const pokemon = document.getElementById("pokemon")
 
-const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150) 
+const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150 + 1) 
 
 console.log('Pokemon')
 
 const getRandomPokemon = (async() => {
     const data = await fetch(url)
-    console.log(data)
     const json = await data.json()
     return json
 })
 
+const renderPokemon = (async() => {
+    const json = await(getRandomPokemon())
+    console.log(json)
 
-getRandomPokemon()
+    const pokename = json.species.name
+    console.log(json.species.name)
 
-const renderPokemon = (data) => {
-    
     const pokeimg = json.sprites.front_default
     console.log(pokeimg)
-    const pokename = json.species.name
-    console.log(pokename)
 
     const img = document.createElement('img')
-    img.src = pokeimg// url of the image from the 'front_default' property
-    img.alt = pokename// name of the pokemon
+    img.src = pokeimg // url of the image from the 'front_default' property
+    img.alt = pokename // name of the pokemon
     pokemon.append(img)
-}
+})
 
-
-const poke = renderPokemon(getRandomPokemon())
-
-console.log(getRandomPokemon())
-
-
-renderPokemon(getRandomPokemon())
-
+renderPokemon()
